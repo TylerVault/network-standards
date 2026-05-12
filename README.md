@@ -30,7 +30,7 @@ A switch is considered **compliant** when it matches the configuration defined b
 No device should be deployed manually outside this standard.
 
 ## Repository Structure
-network-standards/
+<pre> ```network-standards/
 ├── ansible/
 │   ├── playbooks/
 │   ├── templates/
@@ -39,7 +39,7 @@ network-standards/
 │   └── switch_baseline.yml
 ├── docs/
 │   └── switch_standard.md
-└── README.md
+└── README.md``` </pre>
 
 ## Configuration Templatae (Source of Truth)
 The YAML file in:
