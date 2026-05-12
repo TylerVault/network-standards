@@ -1,0 +1,9 @@
+- name: Test Cisco connection
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Run show version
+      cisco.ios.ios_command:
+        commands:
+          - show version
