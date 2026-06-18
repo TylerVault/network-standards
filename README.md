@@ -76,4 +76,14 @@ Network deployments historically depend on tribal knowledge and manual configura
 ## Ownership
 This repository represents the **network engineering standard,** not a personal project. It is designed to be forked, referenced, and adopted as the authoritative baseline for deployments.
 
+## Legacy SSH Compatibility Note
+Some network devices in the environment run legacy IOS versions (namely, 15.2(E)) that only supports older SSH cryptographic algorithms (such as `diffie-hellman-group14-sha1` and `shh-rsa`).
+
+Modern OpenSSH clients (including Git Bash) may reject these algorithms by defualt. In these cases, SSH access requires enabling legacy algorithm support at connection time.
+
+### Example SSH command for legacy devices:
+```bash
+ssh -o KexAlgorithms=+diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-rsa admin@<switch-ip>
+```
+
 
